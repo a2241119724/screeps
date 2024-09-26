@@ -144,7 +144,7 @@ class Main{
             filter: { structureType: STRUCTURE_CONTAINER }
         }).length;
         Memory.controller.worker.maxCount = Math.min(containerNum * 2,roleConfig.workerMaxCount);
-        Memory.controller.carryer.maxCount = Math.min(Math.max(Memory.controller.worker.count,1),spawn.room.find(FIND_SOURCES).length);
+        Memory.controller.carryer.maxCount = Math.min(Math.max(Memory.controller.worker.count,1),spawn.room.find(FIND_SOURCES).length)*2;
         if(Memory.controller.carryer.count){
             // 设计为0时，创建逻辑有问题
             Memory.controller.harvester.maxCount = 1;

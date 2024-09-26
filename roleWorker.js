@@ -50,7 +50,7 @@ class RoleWorker extends Role{
         if(freeCapacity.includes(creep.memory.creepState)){
             // 找资源且自身满了
             if(creep.store.getFreeCapacity()==0){
-                if(Math.random()<0.5){
+                if(Math.random()<0.4){
                     creep.memory.creepState = workerState.toContainer;
                 }else{
                     creep.memory.creepState = workerState.toLink;
@@ -109,7 +109,7 @@ class RoleWorker extends Role{
                 creep.memory.creepState = workerState.toSource;
             }
             if(res==ERR_FULL){
-                if(Math.random()<0.5){
+                if(Math.random()<0.4){
                     creep.memory.creepState = workerState.toContainer;
                 }else{
                     creep.memory.creepState = workerState.toLink;
